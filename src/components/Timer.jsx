@@ -11,7 +11,6 @@ const Timer = () => {
   useEffect(() => {
     let interval;
 
-    console.log(isActive);
     if (isActive) {
       interval = setInterval(() => {
         setSeconds((seconds) => {
