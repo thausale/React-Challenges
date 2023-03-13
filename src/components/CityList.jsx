@@ -4,9 +4,10 @@ const CityLi = (props) => {
   const { cities, setCities } = props;
 
   const removeCity = (cityToFilter) => {
-    const filtered = cities.filter((city) => city != cityToFilter);
-    console.log(filtered);
-    setCities(filtered);
+    // const filtered = cities.filter((city) => city != cityToFilter);
+    // setCities(filtered);
+
+    setCities((prevState) => prevState.filter((el) => el != cityToFilter));
   };
 
   return (
