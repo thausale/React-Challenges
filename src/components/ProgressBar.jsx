@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
+  if (progress > 100) {
+    setProgress(100);
+  }
   const styles = {
     width: `${progress}%`,
   };
