@@ -14,7 +14,7 @@ const CityLi = (props) => {
       {cities.map((city) => (
         <>
           <li key={city} className="cityLi">
-            {city}{" "}
+            {city}
             <button
               className="cityDeleteBtn"
               onClick={() => {
