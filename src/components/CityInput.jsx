@@ -7,7 +7,7 @@ const Challenge3 = () => {
 
   const addCity = (e) => {
     e.preventDefault();
-    setCities([...cities, input]);
+    setCities((prevState) => [...prevState, input]); //SAFER FOR BIG APPS, IN CASE OF ASYNC STUFF ETC
     setCity("");
   };
 
