@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import CityList from "./CityList";
 
 const Challenge3 = () => {
-  const [city, setCity] = useState("");
+  const [input, setInput] = useState("");
   const [cities, setCities] = useState([]);
 
   const addCity = (e) => {
     e.preventDefault();
-    setCities([...cities, city]);
+    setCities([...cities, input]);
     setCity("");
   };
 
@@ -17,8 +17,8 @@ const Challenge3 = () => {
         <input
           placeholder="Add city"
           type="text"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         />
         <button type="submit">Add</button>
       </form>
